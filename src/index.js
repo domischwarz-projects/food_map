@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import GlobalStyles  from './styles/GlobalStyles'
+import reportWebVitals from './test/reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <GlobalStyles />
+        <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('food-map-root')
 );
 
 // If you want to start measuring performance in your app, pass a function
