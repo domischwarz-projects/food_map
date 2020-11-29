@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro';
 
-
-
 export default function RestaurantsQuickInfo() {
     return (
         <PopUp className="popup">
@@ -22,9 +20,9 @@ export default function RestaurantsQuickInfo() {
                 <p href="/#">Arnulfstraße 58, 80335 München</p>
                 <a href="tel:+49 1523 7038463">+49 1523 7038463</a>
             </div>   
-            <div>
-                <button>See All</button>
-            </div>                 
+            <nav>
+                <button className="btn__link">See All</button>
+            </nav>                 
         </PopUp>
     )
 };
@@ -35,7 +33,7 @@ export default function RestaurantsQuickInfo() {
 
 const PopUp = styled.div`
 
-    height: 70vh;
+    height: 65vh;
     width: 100vw;
     position: absolute;
     top: 20rem;
@@ -56,17 +54,5 @@ const PopUp = styled.div`
                 list-style-type: none;
             }            
         }
-    }
-
-    button {
-        width: 100%;
-        height: 39px;
-        border: none;
-        background-color: #F1F1F1;
-        color: #8d8d8d;
-        border-radius: 0.25rem;
-        opacity: 1;
-        font-size: 1rem;
-    }
-    
+    }  
 `

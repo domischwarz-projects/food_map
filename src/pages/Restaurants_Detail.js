@@ -22,7 +22,6 @@ export default function RestaurantsDetail() {
                     <li>Samstag 10:00 - 20:00 Uhr</li>
                     <li>Sonntag 10:00 - 20:00 Uhr</li>
                 </ul>            
-                <button>See All</button>
             </div>
             <div className="popup__location">
                 <h3 className="heading-3">Location</h3>

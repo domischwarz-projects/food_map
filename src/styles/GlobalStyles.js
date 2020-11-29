@@ -50,6 +50,29 @@ export default createGlobalStyle`
     color: #484848; 
     text-decoration: none;    
   }
+
+  //////////////////////////////////////////////
+  //Buttons
+
+  .btn{
+        
+    &__link {
+      width: 100%;
+        height: 39px;
+        border: none;
+        background-color: #F1F1F1;
+        color: #8d8d8d;
+        border-radius: 0.25rem;
+        opacity: 1;
+        font-size: 1rem;
+
+    }
+  }
+  
+ 
  
 
 `
+
+ 
+    
