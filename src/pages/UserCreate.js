@@ -10,8 +10,7 @@ export default function UserCreate() {
 			<div className="popup">
 				<div className="popup__header">					
                 <img className="popup__header--image" src={Logo} alt=""/>              
-				</div>
-				 
+				</div>				 
 			</div>                               
         </PopUp>
     )

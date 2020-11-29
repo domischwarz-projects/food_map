@@ -21,9 +21,9 @@ function App() {
 			<main>			
 			<Map />
 				<Switch>
-					{/* <Route path="/login">
+					<Route path="/login">
 						<UserCreate />
-					</Route> */}					
+					</Route>					
 					<Route path="/profile">
 						<UsersProfilPage />
 					</Route>
