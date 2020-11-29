@@ -9,9 +9,12 @@ export default function UserCreate() {
         <PopUp>
 			<div className="popup">
 				<div className="popup__header">					
-                <img className="popup__header--image" src={Logo} alt=""/>              
+                    <img className="popup__header--image" src={Logo} alt=""/>              
 				</div>
-				 
+                <div className="popup__sign">
+                    <h2 className="popup__sign--title heading-2">Sign Up</h2>    
+                </div>	
+
 			</div>                               
         </PopUp>
     )
@@ -32,14 +35,18 @@ const PopUp = styled.div`
     padding: 2rem;
 
     .popup{		
-        display: flex;
-        justify-content: center;
         margin-top: 5.5rem;
 		&__header {
+            display: flex;
+            justify-content: center;
 			&--image{
 				width: 200px;
 				height: 200px;								
 			}			
 		}
+        &__sign {
+            margin-top: 4.813rem;
+
+        }
     }
 `

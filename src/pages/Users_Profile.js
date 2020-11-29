@@ -31,7 +31,7 @@ export default function UsersProfile() {
 const PopUp = styled.div`
 	
 	//Globalen Style drauß machen aus dem "PopUp" Fenster
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     position: absolute;
     top: 0;
