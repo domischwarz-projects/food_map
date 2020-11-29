@@ -4,7 +4,7 @@ import Domi from '../images/domi.JPG'
 
 
 
-export default function UsersProfilPage() {
+export default function UsersProfile() {
     return (
         <PopUp>
 			<div className="popup">
