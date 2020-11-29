@@ -27,28 +27,29 @@ export default createGlobalStyle`
   }
 
   .heading-2 {
-    font-size: 1.25rem;
+    font-size: 1.25rem; //20px
     line-height: 1.2;
     text-transform: uppercase;
+   
+    
   }
 
   .heading-3{
-    font-size: 1rem;
+    font-size: 1rem; //16px
   }
+
   .paragraph {
     padding-top: 0.875rem;
   }
 
   p,li,a {
-    font-size: 0.875rem;
+    font-size: 0.875rem; //14px
   }
 
   a {
     color: #484848; 
-    text-decoration: none;
-    
+    text-decoration: none;    
   }
+ 
 
-  
-  
 `

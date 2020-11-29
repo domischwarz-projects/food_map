@@ -19,7 +19,7 @@ const center = {
     draggable: false,
     editable: false,
     visible: true,
-    radius: 3000,
+    radius: 50,
     zIndex: 1
   }
   
@@ -36,7 +36,7 @@ const center = {
 export default function aufDieFaustMap() {
     return (
       <LoadScript googleMapsApiKey="AIzaSyCbr81eikRxUAqmOypGYTQhA_d75Mlpj7w">
-        <GoogleMap mapContainerStyle={mapStyles} center={center} zoom={10}>
+        <GoogleMap mapContainerStyle={mapStyles} center={center} zoom={15}>
             { /* Child components, such as markers, info windows, etc. */ }
             <Circle
       // optional

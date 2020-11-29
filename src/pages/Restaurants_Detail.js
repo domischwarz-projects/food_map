@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 
 
 
-export default function Restaurants() {
+export default function RestaurantsDetail() {
     return (
         <PopUp className="popup">
             <div className="popup__header">
@@ -16,11 +16,11 @@ export default function Restaurants() {
                 <ul className="popup__time--list">
                     <li>Montag 10:00 - 20:00 Uhr</li>
                     <li>Dienstag 10:00 - 20:00 Uhr</li>
-                    <li hidden>Mittowch 10:00 - 20:00 Uhr</li>
-                    <li hidden>Donnerstag 10:00 - 20:00 Uhr</li>
-                    <li hidden>Freitag 10:00 - 20:00 Uhr</li>
-                    <li hidden>Samstag 10:00 - 20:00 Uhr</li>
-                    <li hidden>Sonntag 10:00 - 20:00 Uhr</li>
+                    <li>Mittowch 10:00 - 20:00 Uhr</li>
+                    <li>Donnerstag 10:00 - 20:00 Uhr</li>
+                    <li>Freitag 10:00 - 20:00 Uhr</li>
+                    <li>Samstag 10:00 - 20:00 Uhr</li>
+                    <li>Sonntag 10:00 - 20:00 Uhr</li>
                 </ul>            
                 <button>See All</button>
             </div>
