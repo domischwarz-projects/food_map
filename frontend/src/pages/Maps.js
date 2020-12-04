@@ -1,6 +1,6 @@
 import React from 'react';
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
-import { Circle } from '@react-google-maps/api';
+import { GoogleMap, LoadScript } from '../../node_modules/@react-google-maps/api';
+import { Circle } from '../../node_modules/@react-google-maps/api';
 
 
 //Circle Marker Restaurant

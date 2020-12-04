@@ -4,13 +4,14 @@ import Domi from '../images/domi.JPG'
 
 
 
-export default function UsersProfile() {
+
+export default function UsersProfile({ fullName } ) {
     return (
         <PopUp>
 			<div className="popup">
 				<div className="popup__header">
 					<img className="popup__header--image" src={Domi} alt=""/>
-					<h2 className="popup__header--title heading-2">Hello, <br/><strong>Dominik</strong></h2>               
+					<h2 className="popup__header--title heading-2">Hello, <br/><strong>{fullName}</strong></h2>               
 				</div>
 				<div className="popup__favourites">
 					<ul className="popup__favourites--list">
@@ -27,11 +28,10 @@ export default function UsersProfile() {
 
 //////////////////////////////////////////////
 //Styling
-
 const PopUp = styled.div`
 	
 	//Globalen Style drauß machen aus dem "PopUp" Fenster
-    height: 90vh;
+    height: 85vh;
     width: 100vw;
     position: absolute;
     top: 0;

@@ -15,6 +15,8 @@ export default createGlobalStyle`
     font-size: 62.5%;
     color: #484848; 
     line-height: 1.6;
+     /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
   }
 
   //////////////////////////////////////////////

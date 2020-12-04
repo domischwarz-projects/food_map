@@ -6,10 +6,9 @@ import GlobalStyles  from './styles/GlobalStyles'
 import reportWebVitals from './test/reportWebVitals'
 
 ReactDOM.render(
-	<React.StrictMode>
-		
+	<React.StrictMode>		
 		<Router>	
-		<GlobalStyles />		
+			<GlobalStyles />		
 			<App />
 		</Router>		
 	</React.StrictMode>,
