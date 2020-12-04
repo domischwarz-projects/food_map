@@ -1,0 +1,65 @@
+
+/* Individual item */
+.menu-item {
+  font-size: 1.3rem;
+  margin-left: 2rem;
+ margin-bottom: 1rem;
+}
+
+
+.bm-item {
+  display: inline-block;
+  
+}
+/* Change color on hover */
+.bm-item:hover{
+  color: #d1d1d1;
+}
+
+/* no outline on menu item*/
+a.bm-item.menu-item.active {
+  outline: none;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  
+  width: 26px;
+  height: 20px;
+  left: 1.5rem;
+  top: 1.5rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background:#000;
+ 
+
+}
+
+/* button cross */
+.bm-cross-button {
+  display: none;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #fff;  
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #2F2F2F;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;  
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
