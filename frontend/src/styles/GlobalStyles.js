@@ -7,7 +7,6 @@ export default createGlobalStyle`
   * {
     box-sizing: border-box;
     margin: 0;
-    
   }
 
   body {
@@ -16,7 +15,7 @@ export default createGlobalStyle`
     color: #484848; 
     line-height: 1.6;
      /* Prevent sidebar from showing a scrollbar on page */
-  overflow: auto;
+    overflow: auto;
   }
 
   //////////////////////////////////////////////
@@ -70,9 +69,6 @@ export default createGlobalStyle`
 
     }
   }
-  
- 
- 
 
 `
 

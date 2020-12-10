@@ -5,8 +5,8 @@ import { Circle } from '../../node_modules/@react-google-maps/api';
 
 //Circle Marker Restaurant
 const center = {
-    lat: 48.1201275,
-    lng: 11.5712428
+    lat: 48.12895412211271,
+    lng: 11.568265640300746
   }
 
   const options = {
