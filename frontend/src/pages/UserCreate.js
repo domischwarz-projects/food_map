@@ -1,13 +1,17 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components/macro'
 import Logo from '../images/food_logo.png'
+import { useHistory } from 'react-router-dom'
 
 
-export default function UserCreate() {
+export default function UserCreate({ onSignIn }) {
+
+    const history = useHistory();
 
     const [userProfile, setUserProfile] = useState({
-    fullName: '',        
+    userName: '',        
     email: '',
+    password: '',
     });
 
     const [formIsValid, setFormIsValid] = useState(false);
@@ -32,7 +36,12 @@ export default function UserCreate() {
                 body: JSON.stringify(userProfile),
             })
             .then((data) => data.json())  
-            .then(user => console.log(user))            
+            .then(user => {
+                history.push('/welcome', {userProfile}) ;
+                onSignIn(userProfile)
+                console.log(user)  
+            })
+            .catch((error) => console.error(error));                          
         } else {
             alert('ERROR: somthing is wrong!');
         }
@@ -50,15 +59,15 @@ export default function UserCreate() {
                     <h2 className="popup__sign--title heading-2">Sign Up</h2>    
                 </div>
                 
-                <div className="popup__fullname">
-                    <label htmlFor="fullName">
-                        <p>Full Name</p>
+                <div className="popup__userName">
+                    <label htmlFor="userName">
+                        <p>User Name</p>
                     </label>
                     <input
                     type="text"
-                    name="fullName"
+                    name="userName"
                     onChange={handleChange}
-                    value={userProfile.fullName}                
+                    value={userProfile.userName}                
                     />
                 </div>                
                 <div className="popup__email">
@@ -85,8 +94,8 @@ export default function UserCreate() {
 };
 
 //Muss ich nochmal anpassen mit ".lenght" 02.12.2020
-const validateName = ({ fullName}) =>
-fullName.length >= 2;
+const validateName = ({ userName }) =>
+userName.length >= 2;
 
 const hasValidDomain = (email) => {
 const parts = email.split('.');
@@ -111,6 +120,7 @@ const PopUp = styled.form`
     width: 100vw;
     background-color: #fff;
     padding: 2rem;
+    
 
     .popup{		
         margin-top: 3.5rem;
@@ -133,13 +143,13 @@ const PopUp = styled.form`
                 text-transform: none; 
             }
         }
-        &__fullname p,
+        &__userName p,
         &__email p {
             font-size: .75rem;
             padding-bottom: .5rem;
         }
 
-        &__fullname,
+        &__userName,
         &__email {
             padding-bottom: 1.25rem;
         }

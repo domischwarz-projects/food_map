@@ -6,13 +6,19 @@ router.post('/', (req, res) => {
     const newUser  = req.body;
     console.log(newUser)
     const user = new UserModel( {
-        fullName: req.body.fullName ,
+        userName: req.body.userName ,
         email: req.body.email,
        
     }); 
     user.save().then(() => res.json(user));
 });
 
-
+// GET USER BY ID
+router.get('/:userId', (req, res) => {
+    const {userId}  = req.params;
+    console.log("USERID IN SERVER", userId)
+    console.log("PARAMS IN SERVER", req.params)
+   
+});
 
 module.exports = router;

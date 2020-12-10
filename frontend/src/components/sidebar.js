@@ -6,23 +6,25 @@ import Domi from '../images/domi.JPG'
 import styled from 'styled-components/macro'
 
 
-export default function Sidebar({ fullName }) {
+
+export default function Sidebar({userProfile}) {   
+    
     return (
         
         <Menu>
             <SideBar>            
                 <div className="sidebar__header">
                     <img className="sidebar__header--image" src={Domi} alt=""/>
-                    <h2 className="sidebar__header--title heading-2">Hello, <br/><strong>Dominik Schwarz</strong></h2>               
+                    <h2 className="sidebar__header--title heading-2">Hello, <br/><strong>{userProfile.userName}</strong></h2>               
                 </div>   
                 <hr/>                   
             </SideBar>
             
-            <NavLink className="menu-item" to="/">Map</NavLink>
-            <NavLink className="menu-item" to="/sign-up">Sign Up</NavLink>          
+            <NavLink className="menu-item" to="/map">Map</NavLink>
+            <NavLink className="menu-item" to="/">Sign Up</NavLink>
+            <NavLink className="menu-item" to="/login">Login</NavLink>                    
             <NavLink className="menu-item" to="/favourites">Favourites</NavLink>
-            <NavLink className="menu-item" to="/restaurant-detail">Restaurant Detail</NavLink>  
-            <NavLink className="menu-item" to="/restaurant-quick">Restaurant Quick Info</NavLink>              
+            <NavLink className="menu-item" to="/restaurant-detail">Restaurant Detail</NavLink>                         
         </Menu>
     )
 }
@@ -32,7 +34,7 @@ export default function Sidebar({ fullName }) {
 //////////////////////////////////////////////
 //Styling
 const SideBar = styled.div`
-outline: none;
+    outline: none;
 
     .sidebar{
         			

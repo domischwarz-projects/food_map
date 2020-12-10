@@ -1,32 +1,55 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import styled from 'styled-components/macro';
 
 
 
 export default function RestaurantsDetail() {
+    const [restaurantProfile, setRestaurantProfile] = useState({       
+        cuisine: '',
+        name: '',
+        description: '',
+        street: '', 
+        zipcode: '',
+        city: '',
+        borough: '',
+        openinghours: '',
+        phone: '',
+    })
+
+    function fetchRestaurant() {
+        fetch('http://localhost:3001/restaurants/300001')
+        .then(response => response.json())
+        .then(restaurant => 
+            setRestaurantProfile({
+                cuisine: restaurant.cuisine,
+                name: restaurant.name,
+                description: restaurant.description,
+                street: restaurant.address.street,
+                zipcode: restaurant.address.zipcode,
+                city: restaurant.address.city,
+                borough: restaurant.address.borough,
+                openinghours: restaurant.openinghours,
+                phone: restaurant.phone,
+            })
+        )
+    } 
+    
+    useEffect(() => fetchRestaurant(), [])
+
     return (
         <PopUp className="popup">
             <div className="popup__header">
-                <h2 className="heading-2">Türkitch <br/>Hauptbahnhof</h2>
-                <p className="paragraph">Geselliges grillen auf Türkisch, dabei hat hier der Gast die Zange in der Hand: 
-                Tischgrills brinte Lammrücken, Black-Angus-Beef-Steaks</p>
+                <h2 className="heading-2">{restaurantProfile?.name} <br/>{restaurantProfile?.borough}</h2>
+                <p className="paragraph">{restaurantProfile?.description}</p>
             </div>            
             <div className="popup__time">
                 <h3 className="heading-3">Öffnungszeiten</h3>            
-                <ul className="popup__time--list">
-                    <li>Montag 10:00 - 20:00 Uhr</li>
-                    <li>Dienstag 10:00 - 20:00 Uhr</li>
-                    <li>Mittowch 10:00 - 20:00 Uhr</li>
-                    <li>Donnerstag 10:00 - 20:00 Uhr</li>
-                    <li>Freitag 10:00 - 20:00 Uhr</li>
-                    <li>Samstag 10:00 - 20:00 Uhr</li>
-                    <li>Sonntag 10:00 - 20:00 Uhr</li>
-                </ul>            
+                <ul className="popup__time--list">{restaurantProfile?.openinghours}</ul>            
             </div>
             <div className="popup__location">
                 <h3 className="heading-3">Location</h3>
-                <p href="/#">Arnulfstraße 58, 80335 München</p>
-                <a href="tel:+49 1523 7038463">+49 1523 7038463</a>
+                <p >{restaurantProfile?.street}, {restaurantProfile?.zipcode} {restaurantProfile?.city}</p>
+                <a href="tel:{restaurantProfile?.city}">{restaurantProfile?.phone}</a>
             </div>
 
             <div className="popup__menu">
@@ -41,15 +64,16 @@ export default function RestaurantsDetail() {
 //Styling
 
 const PopUp = styled.div`
-
+    //Wiederverwendbare Komponente erstellen
     height: 80vh;
     width: 100vw;
     position: absolute;
     top: 20rem;
     left: 0;
     background-color: #fff;
-    border-radius: 2.6rem;
+    border-radius: 2.6rem 2.6rem 0 0;
     padding: 2rem;
+    box-shadow: 0 0.625rem 1.125rem #484848;
 
     .popup{
         &__header,
