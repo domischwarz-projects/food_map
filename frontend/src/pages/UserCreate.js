@@ -81,6 +81,17 @@ export default function UserCreate({ onSignIn }) {
                     />
                     </label>
                 </div>
+               {/*  <div className="popup__password">
+                    <label>
+                        <p>Passwort</p>
+                    <input
+                        type="password"
+                        name="password"
+                        onChange={handleChange}
+                        value={userProfile.password}
+                    />
+                    </label>
+                </div> */}
                 <div className="popup__btn">
                     <Button disabled={!formIsValid}>Sign Up</Button>
                 </div>
