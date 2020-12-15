@@ -4,7 +4,6 @@ import Map from './pages/Maps'
 
 import UserCreate from './pages/UserCreate'
 import RestaurantsDetail from './pages/Restaurants_Detail';
-import RestaurantsQuickInfo from './pages/Restaurants_Quick'
 import UsersFavourites from './pages/Users_Favourites'
 import SideBar from './components/sidebar'
 import WelcomeUser from './pages/Welcome_User'
@@ -43,11 +42,8 @@ function App() {
 					<Route path="/login">
 						<UserLogin />
 					</Route>
-					<Route path="/restaurant-detail">
+					<Route path="/restaurant-detail/:restaurantId">
 						<RestaurantsDetail /> 
-					</Route>
-					<Route path="/restaurant-quick">
-						<RestaurantsQuickInfo />
 					</Route>					
 				</Switch>
 			</main>							

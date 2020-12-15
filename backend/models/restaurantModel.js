@@ -13,7 +13,15 @@ const restaurantSchema = new mongoose.Schema({
                 city: { type: String, required: true },                 
                 borough: { type: String, required: true }
         },
-        openinghours: { type: Array, required: true },
+        openinghours: { 
+                monday: { type: String, required: true },
+                tuesday: { type: String, required: true },
+                wednesday: { type: String, required: true },
+                thursday: { type: String, required: true },
+                friday: { type: String, required: true },
+                saturday: { type: String, required: true },
+                sunday: { type: String, required: true },
+        },
         pricerange: { type: String, required: true },
         paymentvariation: { type: Array, required: true },
         phone: { type: String, required: true },

@@ -56,7 +56,7 @@ export default function UserCreate({ onSignIn }) {
 				</div>
 
                 <div className="popup__sign">
-                    <h2 className="popup__sign--title heading-2">Sign Up</h2>    
+                    <h2 className="popup__sign--title heading-2">Create Account</h2>    
                 </div>
                 
                 <div className="popup__userName">
@@ -95,9 +95,7 @@ export default function UserCreate({ onSignIn }) {
                 <div className="popup__btn">
                     <Button disabled={!formIsValid}>Sign Up</Button>
                 </div>
-                <div className="popup__terms">
-                    <p>By continuing, you agree to accept our Privacy Policy & Terms of Service.</p>
-                </div>
+                
 
 			</div>                               
         </PopUp>
@@ -141,8 +139,8 @@ const PopUp = styled.form`
             justify-content: center;
 
 			&--image{
-				width: 200px;
-				height: 200px;								
+				width: 100px;
+				height: 100px;								
 			}			
 		}
         &__sign {
@@ -150,7 +148,7 @@ const PopUp = styled.form`
             margin-bottom: 1.44rem;
 
             &--title {
-                font-size: 2.25rem;
+                font-size: 1.5rem;
                 text-transform: none; 
             }
         }
@@ -169,25 +167,18 @@ const PopUp = styled.form`
         input[type='email'] {
             display: flex;
             width: 100%;
-            height: 40px;
+            height: 48px;
             border: 1px solid #C4C4C4;
-            border-radius: .5rem; 
+            border-radius: 1.5rem; 
             font-size: .875rem;
             font-weight: 400;
             padding: 1rem;
             
             &:focus{
-            outline:  #a9a9a9 auto 1px;            
+            outline: none;
+            box-shadow: 0 0 0 1px #a9a9a9;            
             }
-        }
-
-        &__terms {
-            text-align: center;
-            padding: 1.5rem 3rem;
-            p {
-                font-size: 0.625rem;
-            }
-        }      
+        }     
     }
 `
 //Globalen Style drauß machen 02.12.2020
