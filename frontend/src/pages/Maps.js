@@ -1,6 +1,7 @@
 import React from 'react';
 import { GoogleMap, useLoadScript } from '../../node_modules/@react-google-maps/api';
-import Locations from '../components/locations';
+import LocationsMarker from '../components/locationsmarker';
+import { mapStyles} from '../styles/mapstyles'
 
 const mapContainerStyle = {
 	width: '100vw',
@@ -13,21 +14,13 @@ const center = {
 };
 
 const options = {
+	styles: mapStyles,
 	disableDefaultUI: true,
-	zoomControl: false
+	mapTypeControl: false,
+	zoomControl: false,
 };
 
-const noPoi = [
-	{
-		featureType: "poi",
-		elementType: "all",
-		"stylers": [
-			{ 
-			"visibility": "off" 
-			}
-		]  
-	  }
-];
+
 
 
 
@@ -43,13 +36,14 @@ export default function Map() {
 	return(
 		<GoogleMap
 			mapContainerStyle={mapContainerStyle}
-			noPoi={noPoi}
 			zoom={15}
 			center={center}
 			options={options}
 			
+			
 		>
-		<Locations />	
+		<LocationsMarker/>
+			
 		</GoogleMap>
 	)
 };

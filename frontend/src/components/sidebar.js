@@ -20,11 +20,10 @@ export default function Sidebar({userProfile}) {
                 <hr/>                   
             </SideBar>
             
-            <NavLink className="menu-item" to="/map">Map</NavLink>
-            <NavLink className="menu-item" to="/">Sign Up</NavLink>
+            <NavLink className="menu-item" to="/map">FoodGuide</NavLink>
             <NavLink className="menu-item" to="/login">Login</NavLink>                    
             <NavLink className="menu-item" to="/favourites">Favourites</NavLink>
-            <NavLink className="menu-item" to="/restaurant-detail">Restaurant Detail</NavLink>                         
+                                 
         </Menu>
     )
 }

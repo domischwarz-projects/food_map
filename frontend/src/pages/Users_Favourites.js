@@ -56,7 +56,6 @@ const FavouritesWrapper = styled.div`
 const PopUp = styled.div`
 
 	//Globalen Style drauß machen aus dem "PopUp" Fenster
-	height: 100vh;
     width: 100vw;
     position: absolute;
     top: 20rem;
