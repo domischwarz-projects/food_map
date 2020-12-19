@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components/macro'
-import { loadToken } from '../services/tokenStorage';
+import Logo from '../images/food_logo.png'
 import { useHistory } from 'react-router-dom'
 
 
-export default function UserCreate({ onCreateAccount }) {
+export default function UserCreate({ onSignIn }) {
 
     const history = useHistory();
 
@@ -32,14 +32,13 @@ export default function UserCreate({ onCreateAccount }) {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
-                'auth-token': loadToken(),
                 },
                 body: JSON.stringify(userProfile),
             })
             .then((data) => data.json())  
             .then(user => {
                 history.push('/welcome', {userProfile}) ;
-                onCreateAccount(userProfile)
+                onSignIn(userProfile)
                 console.log(user)  
             })
             .catch((error) => console.error(error));                          
@@ -51,10 +50,15 @@ export default function UserCreate({ onCreateAccount }) {
 
     return (
         <PopUp onSubmit={sendForm}>
-			<div className="popup">				
+			<div className="popup">
+				<div className="popup__header">					
+                    <img className="popup__header--image" src={Logo} alt=""/>              
+				</div>
+
                 <div className="popup__sign">
                     <h2 className="popup__sign--title heading-2">Create Account</h2>    
-                </div>                
+                </div>
+                
                 <div className="popup__userName">
                     <label htmlFor="userName">
                         <p>User Name</p>
@@ -77,7 +81,7 @@ export default function UserCreate({ onCreateAccount }) {
                     />
                     </label>
                 </div>
-                <div className="popup__password">
+               {/*  <div className="popup__password">
                     <label>
                         <p>Passwort</p>
                     <input
@@ -87,10 +91,12 @@ export default function UserCreate({ onCreateAccount }) {
                         value={userProfile.password}
                     />
                     </label>
-                </div>
+                </div> */}
                 <div className="popup__btn">
-                    <Button disabled={!formIsValid}>Create Account</Button>
+                    <Button disabled={!formIsValid}>Sign Up</Button>
                 </div>
+                
+
 			</div>                               
         </PopUp>
     )
@@ -98,7 +104,7 @@ export default function UserCreate({ onCreateAccount }) {
 
 //Muss ich nochmal anpassen mit ".lenght" 02.12.2020
 const validateName = ({ userName }) =>
-userName.length >= 4;
+userName.length >= 2;
 
 const hasValidDomain = (email) => {
 const parts = email.split('.');
@@ -108,13 +114,9 @@ return parts.length >= 2 && parts[parts.length - 1].length >= 2;
 const validateEmail = ({ email }) =>
 email.includes('@') && hasValidDomain(email);
 
-const validatePassword = ({ password }) =>
-password.length >= 8;
-
 const validateForm = (userProfile) =>
 validateName(userProfile) &&
-validateEmail(userProfile) &&
-validatePassword(userProfile);
+validateEmail(userProfile);
 
 
 //////////////////////////////////////////////
@@ -130,34 +132,39 @@ const PopUp = styled.form`
     
 
     .popup{		
+        margin-top: 3.5rem;
+      
+		&__header {
+            display: flex;
+            justify-content: center;
+
+			&--image{
+				width: 100px;
+				height: 100px;								
+			}			
+		}
         &__sign {
-            margin-top: 10.75rem;
-            margin-bottom: 2.5rem;
+            margin-top: 4.75rem;
+            margin-bottom: 1.44rem;
+
             &--title {
                 font-size: 1.5rem;
                 text-transform: none; 
             }
         }
         &__userName p,
-        &__email p,
-        &__password p {
+        &__email p {
             font-size: .75rem;
             padding-bottom: .5rem;
         }
 
         &__userName,
-        &__email,
-        &__password {
+        &__email {
             padding-bottom: 1.25rem;
-        }
-
-        &__password {
-            margin-bottom: 1.25rem;
         }
         
         input[type='text'],
-        input[type='email'],
-        input[type='password'] {
+        input[type='email'] {
             display: flex;
             width: 100%;
             height: 48px;

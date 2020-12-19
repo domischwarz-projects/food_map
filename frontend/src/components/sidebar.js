@@ -22,7 +22,6 @@ export default function Sidebar({userProfile}) {
             
             <NavLink className="menu-item" to="/map">FoodGuide</NavLink>                              
             <NavLink className="menu-item" to="/favourites">Favourites</NavLink>
-           
         </Menu>
     )
 }

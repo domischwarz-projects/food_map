@@ -7,8 +7,7 @@ import RestaurantsDetail from './pages/Restaurants_Detail';
 import UsersFavourites from './pages/Users_Favourites'
 import SideBar from './components/sidebar'
 import WelcomeUser from './pages/Welcome_User'
-import UserLogin from './pages/UserLogin';
-
+import UserLogin from './pages/UserLogin'
 
 
 
@@ -17,7 +16,7 @@ function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false)
 	const [userProfile, setUserProfile] = useState({userName:''})
 
-	function handleCreate(userProfile) {
+	function handleSignIn(userProfile) {
 		setIsLoggedIn(true)
 		setUserProfile(userProfile)
 	}
@@ -29,7 +28,7 @@ function App() {
 			<main>						
 				<Switch>
 					<Route exact path="/">
-						<UserCreate  onCreateAccount = {handleCreate} />											
+						<UserCreate  onSignIn = {handleSignIn} />											
 					</Route>
 					<Route path="/welcome">
 						<WelcomeUser  />
