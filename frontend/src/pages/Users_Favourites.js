@@ -6,8 +6,7 @@ import Logo from '../images/food_logo.png'
 
 export default function UsersFavourites() {
     return (		
-		<FavouritesWrapper>
-		
+		<FavouritesWrapper>		
 			<PopUp>
 				<div className="popup">
 					<div className="popup__favourites">

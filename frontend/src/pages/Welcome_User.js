@@ -19,11 +19,11 @@ export default function WelcomeUser() {
 				</div>
 
                 <div className="popup__header">                    
-                    <h2 className="popup__header--title heading-2">Servus, <br/><strong>{welcomeUser.userName}</strong></h2>               
+                    <h2 className="popup__header--title heading-2">Willkomen <br/><strong>{welcomeUser.userName}</strong></h2>               
                 </div> 
                                
                 <div className="popup__btn">
-                    <Button onClick={handleClick} >Profile</Button>
+                    <Button onClick={handleClick} >Open Food Guide</Button>
                 </div>
 			</div>                               
         </WelcomeUserwrapper>
@@ -46,6 +46,11 @@ padding: 2rem;
         justify-content: center;
         margin: 4.75rem 0;
 
+        &--title {
+            font-size: 2.25rem;
+            text-align: center;
+        }
+
         &--image{
             width: 200px;
             height: 200px;								
@@ -59,6 +64,7 @@ const Button = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     color: #fff;
     background-color: #DC0F19;
@@ -67,7 +73,7 @@ const Button = styled.button`
 
     border: none;
     border-radius: 5px;
-    font-size: .75rem;
+    font-size: 1rem;
     font-weight: 600;   
     transition: background-color ease-in-out .5s;
 

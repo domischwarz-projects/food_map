@@ -33,7 +33,8 @@ a.bm-item.menu-item.active {
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background:#000;
+  background:#FF5757;
+  border-radius: .5rem;
  
 
 }

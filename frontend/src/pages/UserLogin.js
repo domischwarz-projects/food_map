@@ -128,7 +128,7 @@ const Button = styled.button`
     align-items: center;
 
     color: #fff;
-    background-color: #DC0F19;
+    background-color: #FF5757;
     width: 100%;
     height: 48px;
 

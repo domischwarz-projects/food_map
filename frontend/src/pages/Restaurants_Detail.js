@@ -1,6 +1,7 @@
 import React, { useState, useEffect }  from 'react'
 import { useParams } from 'react-router';
-import Logo from '../images/food_logo.png'
+import FoodImage from '../images/domi.JPG'
+import Placeholder from '../images/food_logo.png'
 import styled from 'styled-components/macro';
 
 
@@ -47,42 +48,53 @@ export default function RestaurantsDetail() {
     
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => fetchRestaurant(), [])
-
+    
     return (
         <RestaurantWrapper>
-                <div className="bg__restaurant" >					
-                    <img src={Logo} alt=""/>              
+                <div className="header" >                
+                    <h2 className="header--title heading-2">{restaurantProfile?.name}</h2>					                                 
 				</div>
-            <PopUp className="popup">                
-                    <div className="popup__header">
-                        <h2 className="heading-2">{restaurantProfile?.name}</h2>
+            <PopUp className="popup">  
+                    <div className="popup__icons">
+                    <img src={Placeholder} alt=""/>
+                    <img src={Placeholder} alt=""/>
+                    <img src={Placeholder} alt=""/>
+                    <img src={Placeholder} alt=""/>
+                    </div>              
+                    <div className="popup__description">                                                
                         <p className="paragraph">{restaurantProfile?.description}</p>
                     </div>            
                     <div className="popup__time">
-                        <h3 className="heading-3">Öffnungszeiten</h3>            
+                        <div className="popup__time--header">
+                            <img src={Placeholder} alt=""/>
+                            <h3 className="heading-3">Öffnungszeiten</h3> 
+                        </div>                                   
                         <ul className="popup__time--list">
-                            <li><strong>Montag: </strong>{restaurantProfile?.monday}
+                            <li>Montag......................{restaurantProfile?.monday}
                             </li>
-                            <li><strong>Dienstag: </strong> {restaurantProfile?.tuesday}
+                            <li>Dienstag....................{restaurantProfile?.tuesday}
                             </li>
-                            <li><strong>Mittwoch: </strong>{restaurantProfile?.wednesday}
+                            <li>Mittwoch....................{restaurantProfile?.wednesday}
                             </li>
-                            <li><strong>Donnerstag: </strong> {restaurantProfile?.thursday}
+                            <li>Donnerstag................{restaurantProfile?.thursday}
                             </li>
-                            <li><strong>Freitag: </strong> {restaurantProfile?.friday}
+                            <li>Freitag.......................{restaurantProfile?.friday}
                             </li>
-                            <li><strong>Samstag: </strong> {restaurantProfile?.saturday}
+                            <li>Samstag....................{restaurantProfile?.saturday}
                             </li>
-                            <li><strong>Sonntag: </strong> {restaurantProfile?.sunday}
+                            <li>Sonntag.....................{restaurantProfile?.sunday}
                             </li>
                         </ul>            
                     </div>
                     <div className="popup__location">
-                        <h3 className="heading-3">Location</h3>
+                        <div className="popup__location--header">
+                            <img src={Placeholder} alt=""/>
+                            <h3 className="heading-3">Location</h3>
+                        </div>                    
                         <p >{restaurantProfile?.street}, {restaurantProfile?.zipcode} {restaurantProfile?.city}</p>
                         <a href="tel:{restaurantProfile?.city}">{restaurantProfile?.phone}</a>
                     </div>
-                    <div>
+                    <div className="footer--popup">
                         <button className="popup__btn">Route</button>
                     </div>                        
             </PopUp>
@@ -94,18 +106,31 @@ export default function RestaurantsDetail() {
 //////////////////////////////////////////////
 //Styling
 const RestaurantWrapper = styled.div`
-    .bg__restaurant {
+    .header {
+        display: flex;
+        justify-content: center;
+        background: url(${FoodImage}) center no-repeat ;
+        background-size: cover;
+        height: 50vh;
+        width: 100vw;
         position: fixed;
         top: 0;
 
-        img{
-            width: 100vw;    
+        &--title {
+            display: flex;
+            align-items: center;
+            font-size: 1.875rem;
+            color: #fff;
+        }
+        &--image{
+               
         }
     }
     
    
 `
 const PopUp = styled.div`
+
     width: 100vw;
     position: absolute;
     top: 20rem;
@@ -115,29 +140,70 @@ const PopUp = styled.div`
     padding: 2rem;
     box-shadow: 0 0.625rem 1.125rem #484848;
 
-    .popup{
-        &__header,
+    .popup {
+        &__description,
         &__time,
         &__location{
             margin-bottom: 3rem;                            
         }
+
+        &__icons{
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 1rem;
+            img {           
+            width: 26px;
+            }  
+        }
         &__time{
+            &--header {
+                display: flex;
+                img {           
+                width: 26px;
+                }  
+                h3{
+                    padding-left: 1rem;
+                }
+            }
             &--list{
                 padding: 0.875rem 0 1.4rem 0 ;
                 list-style-type: none;
+                li {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    padding-left: 2.7rem;
+                }                
             }            
         }
+
+        &__location {          
+            p {
+                font-size: 1rem;
+                line-height: 2rem;
+                padding-left: 2.7rem;
+                
+            }
+            &--header {
+                display: flex;
+                img {           
+                width: 26px;
+                }  
+                h3{
+                    padding-left: 1rem;
+                }
+            }                  
+        }
     }
+    
 
     button {
         width: 100%;
         height: 39px;
         border: none;
-        background-color: #F1F1F1;
-        color: #8d8d8d;
+        background-color: #FF5757;
+        color: #fff;
         border-radius: 0.25rem;
         opacity: 1;
         font-size: 1rem;
-    }
-    
+    } 
 `
