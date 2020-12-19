@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro'
-import FoodImage from '../images/domi.JPG'
+import FoodImage from '../images/restaurants_img/koefte.jpg'
 
 export default function Carousel() {
     return (

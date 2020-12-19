@@ -1,6 +1,6 @@
 import React, { useState, useEffect }  from 'react'
 import { useParams } from 'react-router';
-import FoodImage from '../images/domi.JPG'
+import FoodImage from '../images/restaurants_img/köfte.jpg'
 import Placeholder from '../images/food_logo.png'
 import styled from 'styled-components/macro';
 
