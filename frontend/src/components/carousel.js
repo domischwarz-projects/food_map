@@ -1,14 +1,10 @@
 import React from 'react';
 import styled from 'styled-components/macro'
 <<<<<<< HEAD
-<<<<<<< HEAD
 import FoodImage from '../images/restaurants_img/koefte.jpg'
 =======
 import FoodImage from '../images/restaurants_img/köfte.jpg'
 >>>>>>> master
-=======
-import FoodImage from '../images/domi.JPG'
->>>>>>> parent of d6d7109... images
 
 export default function Carousel() {
     return (
