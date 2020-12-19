@@ -1,21 +1,64 @@
-import React from 'react'
+import {  useEffect, useState } from 'react';
 import styled from 'styled-components/macro'
+import { loadToken } from '../services/tokenStorage';
+
+import { useHistory } from 'react-router-dom'
 import Logo from '../images/food_logo.png'
 
 
-export default function UserLogin() {
+export default function UserLogin(onCreateAccount) {
 
-   
+    const history = useHistory();
+
+    const [userProfile, setUserProfile] = useState({
+    userName: '',        
+    email: '',
+    password: '',
+    });
+
+    const [formIsValid, setFormIsValid] = useState(false);
+
+    function handleChange(event) {        
+        setUserProfile({
+            ...userProfile,
+            [event.target.name]: event.target.value,
+        });
+    }
+
+          
+    useEffect(() => setFormIsValid(validateForm(userProfile)), [userProfile]);
+
+    function sendForm(event) {
+        event.preventDefault();
+        if (validateForm(userProfile)) {
+            fetch('http://localhost:3001/login', {                    //SERVER EINTRAGEN
+                method: 'POST',
+                headers: {
+                'Content-Type': 'application/json',
+                },
+            })
+            .then((data) => data.json())  
+            .then(user => {
+                history.push('/', {userProfile}) ;
+                onCreateAccount(userProfile)
+                loadToken.setItem("TOKEN_KEY", user.data.token);  
+            })
+            .catch((error) => console.error(error));                          
+        } else {
+            alert('ERROR: somthing is wrong!');
+        }
+    }
+
 
     return (
-        <PopUp >
+        <PopUp onSubmit={sendForm}>
 			<div className="popup">
 				<div className="popup__header">					
                     <img className="popup__header--image" src={Logo} alt=""/>              
 				</div>
 
                 <div className="popup__login">
-                    <h2 className="popup__login--title heading-2">Sign Up</h2>    
+                    <h2 className="popup__login--title heading-2">Login</h2>    
                 </div>
                 
                 <div className="popup__userName">
@@ -25,7 +68,8 @@ export default function UserLogin() {
                     <input
                     type="text"
                     name="userName"
-                               
+                    onChange={handleChange}
+                    value={userProfile.userName}
                     />
                 </div>                
                 <div className="popup__password">
@@ -34,12 +78,13 @@ export default function UserLogin() {
                     <input
                         type="password"
                         name="password"
-                        
+                        onChange={handleChange}
+                        value={userProfile.password}
                     />
                     </label>
                 </div>
                 <div className="popup__btn">
-                    <Button >Sign Up</Button>
+                    <Button disabled={!formIsValid}>Login</Button>
                 </div>
                 <div className="popup__terms">
                     <p>By continuing, you agree to accept our Privacy Policy & Terms of Service.</p>
@@ -50,6 +95,16 @@ export default function UserLogin() {
     )
 };
 
+//Muss ich nochmal anpassen mit ".lenght" 02.12.2020
+const validateName = ({ userName }) =>
+userName.length >= 4;
+
+const validatePassword = ({ password }) =>
+password.length >= 8;
+
+const validateForm = (userProfile) =>
+validateName(userProfile) &&
+validatePassword(userProfile);
 
 
 //////////////////////////////////////////////
