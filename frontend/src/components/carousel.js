@@ -1,6 +1,12 @@
 import React from 'react';
 import styled from 'styled-components/macro'
+<<<<<<< Updated upstream
 import FoodImage from '../images/restaurants_img/köfte.jpg'
+=======
+
+import FoodImage from '../images/restaurants_img/koefte.jpg'
+
+>>>>>>> Stashed changes
 
 export default function Carousel() {
     return (

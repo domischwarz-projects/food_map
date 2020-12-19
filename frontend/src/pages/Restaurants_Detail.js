@@ -1,6 +1,12 @@
 import React, { useState, useEffect }  from 'react'
 import { useParams } from 'react-router';
+<<<<<<< Updated upstream
 import FoodImage from '../images/restaurants_img/köfte.jpg'
+=======
+
+import FoodImage from '../images/restaurants_img/köfte.jpg'
+
+>>>>>>> Stashed changes
 import Placeholder from '../images/food_logo.png'
 import styled from 'styled-components/macro';
 
