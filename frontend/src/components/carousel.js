@@ -1,25 +1,31 @@
 import React from 'react';
 import styled from 'styled-components/macro'
-import FoodImage from '../images/domi.JPG'
+import FoodImage from '../images/restaurants_img/köfte.jpg'
 
 export default function Carousel() {
     return (
         <CarouselWrapper>
-            <div className="carousel__one" >
+            <div className="carousel__first" >
+            <p>FIRST</p>
             </div>
             <div className="carousel__second" >
+            <p>SECOND</p>
             </div>
             <div className="carousel__third" >
+            <p>THIRD</p>
             </div>
-           {/*  <div className="carousel__fourth">
+           <div className="carousel__fourth">
+               <p>FOUR</p>
             </div>
             <div className="carousel__five">
-            </div> */}
+            <p>FIVE</p>
+            </div>
         </CarouselWrapper>
     )
 }
 
 const CarouselWrapper = styled.div`
+
 position: relative;
 display: flex;
 justify-content: center;
@@ -35,30 +41,55 @@ div{
     background-size: cover;
     opacity: 1;
     animation: display 10s infinite;
+    display: flex;
+    justify-content: center;
+
+    p {
+        font-size: 2rem;
+        color: red;
+        display: flex;
+        align-items: center;
+        
+       
+    }
 }
 
 
 .carousel{
-   
+   &__first {
+
+   }
     &__second {
         margin-right: 370px;
+
+        &:nth-child(2) {
+        animation-delay: 2s;
+        }
     }
 
     &__third{
         margin-left: 370px;
+
+        &:nth-child(3) {
+        animation-delay: 2s;
+        }
     }
 
-    &__second:nth-child(2) {
-    animation-delay: 2s;
+    &__fourth{
+        margin-left: 740px;
+
+        &:nth-child(4) {
+        animation-delay: 2s;
+        }
     }
-    &__third:nth-child(3) {
-    animation-delay: 4s;
+
+    &__five{
+        margin-right: 740px;
+
+        &:nth-child(5) {
+        animation-delay: 2s;
+        }
     }
-    /* &__fourth:nth-child(4) {
-    animation-delay: 6s;
-    }
-    &__fice:nth-child(5) {
-    animation-delay: 8s;
-    } */
+
 }
 `
