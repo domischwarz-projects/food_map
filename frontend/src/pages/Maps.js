@@ -1,7 +1,10 @@
-import React from 'react';
+import {useCallback, useRef} from 'react';
 import { GoogleMap, useLoadScript } from '../../node_modules/@react-google-maps/api';
 import LocationsMarker from '../components/locationsmarker';
 import { mapStyles} from '../styles/mapstyles'
+import Geolocate from '../components/geolocation';
+import Carousel from '../components/carousel';
+
 
 const mapContainerStyle = {
 	width: '100vw',
@@ -22,9 +25,18 @@ const options = {
 
 
 
-
-
 export default function Map() {
+
+	const mapRef = useRef();
+    const onMapLoad = useCallback((map) => {
+  		mapRef.current = map;
+	}, []);
+
+    const panTo = useCallback(({ lat, lng }) => {
+    	mapRef.current.panTo({ lat, lng });
+    	mapRef.current.setZoom(15);
+  	}, []);
+
 	const { isLoaded, loadError } = useLoadScript({
 		googleMapsApiKey: process.env.REACT_APP_API_KEY,
 		
@@ -36,13 +48,14 @@ export default function Map() {
 	return(
 		<GoogleMap
 			mapContainerStyle={mapContainerStyle}
-			zoom={15}
+			zoom={11}
 			center={center}
 			options={options}
-			
-			
+			onLoad={onMapLoad}
 		>
-		<LocationsMarker/>
+			<LocationsMarker/>
+			<Geolocate panTo={panTo} />
+			<Carousel />
 			
 		</GoogleMap>
 	)

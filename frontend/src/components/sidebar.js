@@ -15,15 +15,13 @@ export default function Sidebar({userProfile}) {
             <SideBar>            
                 <div className="sidebar__header">
                     <img className="sidebar__header--image" src={Domi} alt=""/>
-                    <h2 className="sidebar__header--title heading-2">Hello, <br/><strong>{userProfile.userName}</strong></h2>               
+                    <h2 className="sidebar__header--title heading-2">Hello <br/><strong>{userProfile.userName}</strong></h2>               
                 </div>   
                 <hr/>                   
             </SideBar>
             
-            <NavLink className="menu-item" to="/map">FoodGuide</NavLink>
-            <NavLink className="menu-item" to="/login">Login</NavLink>                    
+            <NavLink className="menu-item" to="/map">FoodGuide</NavLink>                              
             <NavLink className="menu-item" to="/favourites">Favourites</NavLink>
-                                 
         </Menu>
     )
 }
@@ -44,17 +42,18 @@ const SideBar = styled.div`
             
             
 			&--image{
-				width: 60px;
-				height: 60px;
+				width: 110px;
+				height: 110px;
 				align-items: center;
-				border-radius: 100%;
+				border-radius: 1.5rem;
 				margin-right: 1rem;
 			}
 			&--title{
 				text-transform: none;
 				font-weight: 400;
 				strong{
-					font-size: 1.2rem;
+                    font-size: 1.875rem;
+                    text-transform: uppercase;
 				}
 			}
         }
@@ -62,5 +61,7 @@ const SideBar = styled.div`
     hr{
         margin-bottom: 4rem;
     }
+
+   
        
 `
