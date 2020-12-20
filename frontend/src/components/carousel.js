@@ -56,15 +56,11 @@ div{
     }
 }
 
-.window {
-    
-}
-
 .carousel{
     &__first {
         transform: translate(0, -70px);
         width: 227px;
-        height: 243px;  
+        height: 243px; 
     }
     &__second {
         margin-right: 420px;

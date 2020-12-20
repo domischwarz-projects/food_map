@@ -23,7 +23,7 @@ function App() {
 	return (
 		<div className="App">
 			{
-			isLoggedIn && <SideBar pageWrapId={"main"} outerContainerId={"App"} userProfile = {userProfile}/>
+			isLoggedIn && <SideBar pageWrapId={"main"} outerContainerId={"App"} userProfile={userProfile}/>
 			}
 			<main>						
 				<Switch>

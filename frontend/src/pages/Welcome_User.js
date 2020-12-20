@@ -7,6 +7,7 @@ import Logo from '../images/food_logo.png'
 export default function WelcomeUser() {
     const location = useLocation ()
     const history = useHistory();
+
     const welcomeUser = location.state.userProfile
     const handleClick = () => history.push('/map');
     
