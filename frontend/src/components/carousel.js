@@ -7,19 +7,19 @@ import FoodImage from '../images/restaurants_img/köfte.jpg'
 export default function Carousel() {
     return (
         <CarouselWrapper>
-            <div className="carousel__first" >
+            <div className="window carousel__first">
             <p>FIRST</p>
             </div>
-            <div className="carousel__second" >
+            <div className="window carousel__second" >
             <p>SECOND</p>
             </div>
-            <div className="carousel__third" >
+            <div className="window carousel__third" >
             <p>THIRD</p>
             </div>
-           <div className="carousel__fourth">
+           <div className="window carousel__fourth">
                <p>FOUR</p>
             </div>
-            <div className="carousel__five">
+            <div className="window carousel__five">
             <p>FIVE</p>
             </div>
         </CarouselWrapper>
@@ -56,13 +56,18 @@ div{
     }
 }
 
+.window {
+    
+}
 
 .carousel{
-   &__first {
-
-   }
+    &__first {
+        transform: translate(0, -70px);
+        width: 227px;
+        height: 243px;  
+    }
     &__second {
-        margin-right: 370px;
+        margin-right: 420px;
 
         &:nth-child(2) {
         animation-delay: 2s;
@@ -70,7 +75,7 @@ div{
     }
 
     &__third{
-        margin-left: 370px;
+        margin-left: 420px;
 
         &:nth-child(3) {
         animation-delay: 2s;
@@ -78,7 +83,7 @@ div{
     }
 
     &__fourth{
-        margin-left: 740px;
+        margin-left: 840px;
 
         &:nth-child(4) {
         animation-delay: 2s;
@@ -86,7 +91,7 @@ div{
     }
 
     &__five{
-        margin-right: 740px;
+        margin-right: 840px;
 
         &:nth-child(5) {
         animation-delay: 2s;
