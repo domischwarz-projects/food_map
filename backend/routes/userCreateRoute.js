@@ -1,5 +1,5 @@
 import express from 'express'
-import UserModel from '../models/userModel'
+import UserModel from '../models/userCreateModel'
 const router = express.Router();
 
 router.post('/', (req, res) => {

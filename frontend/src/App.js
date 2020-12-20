@@ -12,6 +12,7 @@ import UserLogin from './pages/UserLogin'
 
 
 
+
 function App() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false)
 	const [userProfile, setUserProfile] = useState({userName:''})
@@ -27,11 +28,12 @@ function App() {
 			}
 			<main>						
 				<Switch>
+				
 					<Route exact path="/">
-						<UserCreate  onSignIn = {handleSignIn} />											
+						<UserCreate  onSignIn = {handleSignIn} />		
 					</Route>
 					<Route path="/welcome">
-						<WelcomeUser  />
+						<WelcomeUser   />
 					</Route>
 					<Route path="/map">
 						<Map />	
