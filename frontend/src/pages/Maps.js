@@ -1,5 +1,5 @@
 import {useCallback, useRef} from 'react';
-import { GoogleMap, useLoadScript } from '../../node_modules/@react-google-maps/api';
+import { GoogleMap, useLoadScript} from '../../node_modules/@react-google-maps/api';
 import LocationsMarker from '../components/locationsmarker';
 import { mapStyles} from '../styles/mapstyles'
 import Geolocate from '../components/geolocation';
@@ -34,7 +34,7 @@ export default function Map() {
 
     const panTo = useCallback(({ lat, lng }) => {
     	mapRef.current.panTo({ lat, lng });
-    	mapRef.current.setZoom(15);
+		mapRef.current.setZoom(14);
   	}, []);
 
 	const { isLoaded, loadError } = useLoadScript({

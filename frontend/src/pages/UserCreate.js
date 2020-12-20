@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components/macro'
-import Logo from '../images/food_logo.png'
+import LeftArrow from '../images/Icons/left-arrow.svg'
 import { useHistory } from 'react-router-dom'
 
 
@@ -43,7 +43,7 @@ export default function UserCreate({ onSignIn }) {
             })
             .catch((error) => console.error(error));                          
         } else {
-            alert('ERROR: somthing is wrong!');
+            alert('ERROR: something is wrong!');
         }
     }
 
@@ -51,10 +51,9 @@ export default function UserCreate({ onSignIn }) {
     return (
         <PopUp onSubmit={sendForm}>
 			<div className="popup">
-				<div className="popup__header">					
-                    <img className="popup__header--image" src={Logo} alt=""/>              
-				</div>
-
+                <ButtonArrow>
+                    <img src={LeftArrow} alt=""/>
+                </ButtonArrow>
                 <div className="popup__sign">
                     <h2 className="popup__sign--title heading-2">Create Account</h2>    
                 </div>
@@ -81,7 +80,7 @@ export default function UserCreate({ onSignIn }) {
                     />
                     </label>
                 </div>
-               {/*  <div className="popup__password">
+                <div className="popup__password">
                     <label>
                         <p>Passwort</p>
                     <input
@@ -91,12 +90,16 @@ export default function UserCreate({ onSignIn }) {
                         value={userProfile.password}
                     />
                     </label>
-                </div> */}
-                <div className="popup__btn">
-                    <Button disabled={!formIsValid}>Sign Up</Button>
+                </div> 
+                <div className="popup__terms">
+                    <p>I accept the Terms of Use.</p>
                 </div>
-                
-
+                <div className="popup__signup">
+                    <p>Sign up for email updates.</p>
+                </div>
+                <div className="popup__btn">
+                    <Button disabled={!formIsValid}>Create Account</Button>
+                </div>
 			</div>                               
         </PopUp>
     )
@@ -114,9 +117,13 @@ return parts.length >= 2 && parts[parts.length - 1].length >= 2;
 const validateEmail = ({ email }) =>
 email.includes('@') && hasValidDomain(email);
 
+const validatePassword = ({ password }) =>
+password.length >= 8;
+
 const validateForm = (userProfile) =>
 validateName(userProfile) &&
-validateEmail(userProfile);
+validateEmail(userProfile) &&
+validatePassword(userProfile);
 
 
 //////////////////////////////////////////////
@@ -132,20 +139,14 @@ const PopUp = styled.form`
     
 
     .popup{		
-        margin-top: 3.5rem;
-      
 		&__header {
             display: flex;
-            justify-content: center;
-
-			&--image{
-				width: 100px;
-				height: 100px;								
-			}			
+            justify-content: center;	
 		}
         &__sign {
-            margin-top: 4.75rem;
-            margin-bottom: 1.44rem;
+            margin-top: 6.688rem;
+            margin-bottom: 2.5rem;
+            
 
             &--title {
                 font-size: 1.5rem;
@@ -153,8 +154,10 @@ const PopUp = styled.form`
             }
         }
         &__userName p,
-        &__email p {
+        &__email p,
+        &__password p {
             font-size: .75rem;
+            font-weight: 500;
             padding-bottom: .5rem;
         }
 
@@ -162,9 +165,14 @@ const PopUp = styled.form`
         &__email {
             padding-bottom: 1.25rem;
         }
+
+        &__password {
+            padding-bottom: 2.188rem;
+        }
         
         input[type='text'],
-        input[type='email'] {
+        input[type='email'],
+        input[type='password'] {
             display: flex;
             width: 100%;
             height: 48px;
@@ -178,14 +186,39 @@ const PopUp = styled.form`
             outline: none;
             box-shadow: 0 0 0 1px #a9a9a9;            
             }
-        }     
+        }
+
+        &__terms,
+        &__signup {
+            padding-bottom: 1.75rem;
+            p {
+                font-size: 0.75rem;
+            }
+        }      
     }
+`
+const ButtonArrow = styled.button`
+   
+   position: absolute;
+    top: 4rem;
+    left: 1.25rem;
+    background: none;
+    border: none;
+    z-index: 10;
+    outline: none;
+    cursor: pointer;
+
+    img {
+        width: 30px;                
+    }
+      
 `
 //Globalen Style drauß machen 02.12.2020
 const Button = styled.button`
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: .5rem;
 
     color: #fff;
     background-color: #FF5757;
@@ -196,6 +229,8 @@ const Button = styled.button`
     border-radius: 5px;
     font-size: .75rem;
     font-weight: 600;   
+    letter-spacing: .6px;
+    text-transform: uppercase;
     transition: background-color ease-in-out .5s;
 
   &[disabled] {
