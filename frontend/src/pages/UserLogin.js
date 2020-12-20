@@ -71,8 +71,8 @@ const PopUp = styled.form`
             justify-content: center;
 
 			&--image{
-				width: 200px;
-				height: 200px;								
+				width: 180px;
+				height: 180px;								
 			}			
 		}
         &__login {
