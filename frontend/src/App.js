@@ -8,13 +8,15 @@ import UsersFavourites from './pages/Users_Favourites'
 import SideBar from './components/sidebar'
 import WelcomeUser from './pages/Welcome_User'
 import UserLogin from './pages/UserLogin'
+import { loadToken } from './services/tokenStorage';
 
 
 
 
 
 function App() {
-	const [isLoggedIn, setIsLoggedIn] = useState(false)
+	const [isLoggedIn, setIsLoggedIn] = useState(loadToken()!== '' 
+	&& loadToken() !== null )
 	const [userProfile, setUserProfile] = useState({userName:''})
 
 	function handleSignIn(userProfile) {
@@ -30,7 +32,7 @@ function App() {
 				<Switch>
 				
 					<Route exact path="/">
-						<UserCreate  onSignIn = {handleSignIn} />		
+						<UserCreate />		
 					</Route>
 					<Route path="/welcome">
 						<WelcomeUser   />
@@ -42,7 +44,7 @@ function App() {
 						<UsersFavourites />
 					</Route>
 					<Route path="/login">
-						<UserLogin />
+						<UserLogin onSignIn={handleSignIn}/>
 					</Route>
 					<Route path="/restaurant-detail/:restaurantId">
 						<RestaurantsDetail /> 

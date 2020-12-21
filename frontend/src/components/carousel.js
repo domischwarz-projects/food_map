@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro'
 
-import FoodImage from '../images/restaurants_img/köfte.jpg'
+import FoodImage from '../images/restaurants_img/Occam.JPG'
 
 
 export default function Carousel() {

@@ -1,5 +1,5 @@
 import express from 'express'
-import UserModel from '../models/userCreateModel'
+import UserModel from '../models/UserModel'
 const router = express.Router();
 
 router.post('/', (req, res) => {
@@ -8,6 +8,7 @@ router.post('/', (req, res) => {
     const user = new UserModel( {
         userName: req.body.userName ,
         email: req.body.email,
+        password: req.body.password,
        
     }); 
     user.save().then(() => res.json(user));

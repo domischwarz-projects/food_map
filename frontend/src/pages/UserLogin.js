@@ -1,19 +1,19 @@
 import {  useEffect, useState } from 'react';
 import styled from 'styled-components/macro'
-import { loadToken } from '../services/tokenStorage';
+import { saveToken } from '../services/tokenStorage';
 
 import { useHistory } from 'react-router-dom'
 import Logo from '../images/food_logo.png'
 import LeftArrow from '../images/Icons/left-arrow.svg'
 
 
-export default function UserLogin(onCreateAccount) {
+export default function UserLogin({onSignIn}) {
 
     const history = useHistory();
+  
 
     const [userProfile, setUserProfile] = useState({
-    userName: '',        
-    email: '',
+    userName: '',  
     password: '',
     });
 
@@ -37,12 +37,14 @@ export default function UserLogin(onCreateAccount) {
                 headers: {
                 'Content-Type': 'application/json',
                 },
+                body: JSON.stringify(userProfile),
             })
             .then((data) => data.json())  
+            
             .then(user => {
-                history.push('/', {userProfile}) ;
-                onCreateAccount(userProfile)
-                loadToken.setItem("TOKEN_KEY", user.data.token);
+                saveToken(user.accesstoken);
+                onSignIn(userProfile)
+                history.push('/map', {userProfile}) ;            
             })
             .catch((error) => console.error(error));                          
         } else {
@@ -50,11 +52,11 @@ export default function UserLogin(onCreateAccount) {
         }
     }
 
-
+    const handleClick = () => history.push('/');
     return (
         <PopUp onSubmit={sendForm}>
 			<div className="popup">
-                <ButtonArrow>
+                <ButtonArrow onClick={handleClick}>
                     <img src={LeftArrow} alt=""/>
                 </ButtonArrow>
 				<div className="popup__header">					

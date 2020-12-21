@@ -21,7 +21,7 @@ export default function Sidebar({userProfile}) {
             </SideBar>
             
             <NavLink className="menu-item" to="/map">FoodGuide</NavLink>                              
-            <NavLink className="menu-item" to="/favourites">Favourites</NavLink>
+            <NavLink className="menu-item" to="/login">Login</NavLink>
         </Menu>
     )
 }
@@ -52,7 +52,7 @@ const SideBar = styled.div`
 				text-transform: none;
 				font-weight: 400;
 				strong{
-                    font-size: 1.875rem;
+                    font-size: 1.2rem;
                     text-transform: uppercase;
 				}
 			}

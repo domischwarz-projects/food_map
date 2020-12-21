@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import styled from 'styled-components/macro'
-import LeftArrow from '../images/Icons/left-arrow.svg'
 import { useHistory } from 'react-router-dom'
 
 
-export default function UserCreate({ onSignIn }) {
+export default function UserCreate() {
 
     const history = useHistory();
+    const handleClick = () => history.push('/login');
 
     const [userProfile, setUserProfile] = useState({
     userName: '',        
@@ -36,10 +36,8 @@ export default function UserCreate({ onSignIn }) {
                 body: JSON.stringify(userProfile),
             })
             .then((data) => data.json())  
-            .then(user => {
-                history.push('/welcome', {userProfile}) ;
-                onSignIn(userProfile)
-                console.log(user)  
+            .then(_ => {
+                history.push('/welcome', {userProfile}) ; 
             })
             .catch((error) => console.error(error));                          
         } else {
@@ -51,9 +49,7 @@ export default function UserCreate({ onSignIn }) {
     return (
         <PopUp onSubmit={sendForm}>
 			<div className="popup">
-                <ButtonArrow>
-                    <img src={LeftArrow} alt=""/>
-                </ButtonArrow>
+                
                 <div className="popup__sign">
                     <h2 className="popup__sign--title heading-2">Create Account</h2>    
                 </div>
@@ -99,6 +95,9 @@ export default function UserCreate({ onSignIn }) {
                 </div>
                 <div className="popup__btn">
                     <Button disabled={!formIsValid}>Create Account</Button>
+                </div>
+                <div className="popup__account">
+                    <p>Already have an account? <span onClick={handleClick}>Login</span></p>
                 </div>
 			</div>                               
         </PopUp>
@@ -189,30 +188,23 @@ const PopUp = styled.form`
         }
 
         &__terms,
-        &__signup {
+        &__signup,
+        &__account {
             padding-bottom: 1.75rem;
             p {
                 font-size: 0.75rem;
             }
+        }
+        &__account {
+            padding-top: 1.75rem;
+            text-align: center;
+            span {
+                color: #FF5757;
+            }
         }      
     }
 `
-const ButtonArrow = styled.button`
-   
-   position: absolute;
-    top: 4rem;
-    left: 1.25rem;
-    background: none;
-    border: none;
-    z-index: 10;
-    outline: none;
-    cursor: pointer;
 
-    img {
-        width: 30px;                
-    }
-      
-`
 //Globalen Style drauß machen 02.12.2020
 const Button = styled.button`
     display: flex;

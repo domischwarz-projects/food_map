@@ -1,11 +1,14 @@
 import React, { useState, useEffect }  from 'react'
 import { useParams } from 'react-router';
-
-import FoodImage from '../images/restaurants_img/köfte.jpg'
-
-import Placeholder from '../images/food_logo.png'
 import styled from 'styled-components/macro';
 
+import FoodImage from '../images/restaurants_img/Marinasfeinkost.JPG'
+import Time from '../images/Icons/time2.png'
+import Burger from '../images/Icons/burger2.png'
+import Vegan from '../images/Icons/vegan2.png'
+import Drink from '../images/Icons/drink2.png'
+import Beef from '../images/Icons/beef2.png'
+import Location from '../images/Icons/location2.png'
 
 
 export default function RestaurantsDetail() {
@@ -44,6 +47,7 @@ export default function RestaurantsDetail() {
                 saturday: restaurant.openinghours.saturday,
                 sunday: restaurant.openinghours.sunday,
                 phone: restaurant.phone,
+                image: restaurant.image
             })
         )
     } 
@@ -52,23 +56,23 @@ export default function RestaurantsDetail() {
     useEffect(() => fetchRestaurant(), [])
     
     return (
-        <RestaurantWrapper>
+        <RestaurantWrapper >
                 <div className="header" >                
-                    <h2 className="header--title heading-2">{restaurantProfile?.name}</h2>					                                 
+                    <h2 className="header--title heading-2">{restaurantProfile?.name}</h2>                              
 				</div>
             <PopUp className="popup">  
                     <div className="popup__icons">
-                    <img src={Placeholder} alt=""/>
-                    <img src={Placeholder} alt=""/>
-                    <img src={Placeholder} alt=""/>
-                    <img src={Placeholder} alt=""/>
+                    <img src={Burger} alt=""/>
+                    <img src={Drink} alt=""/>
+                    <img src={Beef} alt=""/>
+                    <img src={Vegan} alt=""/>
                     </div>              
                     <div className="popup__description">                                                
                         <p className="paragraph">{restaurantProfile?.description}</p>
                     </div>            
                     <div className="popup__time">
                         <div className="popup__time--header">
-                            <img src={Placeholder} alt=""/>
+                            <img src={Time} alt=""/>
                             <h3 className="heading-3">Öffnungszeiten</h3> 
                         </div>                                   
                         <ul className="popup__time--list">
@@ -90,7 +94,7 @@ export default function RestaurantsDetail() {
                     </div>
                     <div className="popup__location">
                         <div className="popup__location--header">
-                            <img src={Placeholder} alt=""/>
+                            <img src={Location} alt=""/>
                             <h3 className="heading-3">Location</h3>
                         </div>                    
                         <p >{restaurantProfile?.street}, {restaurantProfile?.zipcode} {restaurantProfile?.city}</p>
@@ -124,9 +128,7 @@ const RestaurantWrapper = styled.div`
             font-size: 1.875rem;
             color: #fff;
         }
-        &--image{
-               
-        }
+       
     }
     
    
@@ -154,15 +156,15 @@ const PopUp = styled.div`
             justify-content: space-evenly;
             margin-bottom: 1rem;
             img {           
-            width: 26px;
+            height: 26px;
             }  
         }
         &__time{
             &--header {
                 display: flex;
                 img {           
-                width: 26px;
-                }  
+                    height: 26px;
+                }   
                 h3{
                     padding-left: 1rem;
                 }

@@ -9,7 +9,7 @@ export default function WelcomeUser() {
     const history = useHistory();
 
     const welcomeUser = location.state.userProfile
-    const handleClick = () => history.push('/map');
+    const handleClick = () => history.push('/login');
     
 
     return (
@@ -24,7 +24,7 @@ export default function WelcomeUser() {
                 </div> 
                                
                 <div className="popup__btn">
-                    <Button onClick={handleClick} >Open Food Guide</Button>
+                    <Button onClick={handleClick}>Login to Open Food Guide</Button>
                 </div>
 			</div>                               
         </WelcomeUserwrapper>
