@@ -1,14 +1,7 @@
 import React, { useState, useEffect }  from 'react'
 import { useParams } from 'react-router';
 import styled from 'styled-components/macro';
-
-import FoodImage from '../images/restaurants_img/Marinasfeinkost.JPG'
-import Time from '../images/Icons/time2.png'
-import Burger from '../images/Icons/burger2.png'
-import Vegan from '../images/Icons/vegan2.png'
-import Drink from '../images/Icons/drink2.png'
-import Beef from '../images/Icons/beef2.png'
-import Location from '../images/Icons/location2.png'
+import ButtonMap from '../components/ButtonMap';
 
 
 export default function RestaurantsDetail() {
@@ -25,6 +18,7 @@ export default function RestaurantsDetail() {
         borough: '',
         openinghours: '',
         phone: '',
+        icon: '',
     })
 
     function fetchRestaurant() {
@@ -47,7 +41,13 @@ export default function RestaurantsDetail() {
                 saturday: restaurant.openinghours.saturday,
                 sunday: restaurant.openinghours.sunday,
                 phone: restaurant.phone,
-                image: restaurant.image
+                image: restaurant.image,
+                burger: restaurant.icons.burger,
+                beef: restaurant.icons.beef,
+                vegan: restaurant.icons.vegan,
+                drink: restaurant.icons.drink,
+                location: restaurant.icons.location,
+                time: restaurant.icons.time,
             })
         )
     } 
@@ -56,23 +56,24 @@ export default function RestaurantsDetail() {
     useEffect(() => fetchRestaurant(), [])
     
     return (
-        <RestaurantWrapper >
-                <div className="header" >                
+        <RestaurantWrapper imgUrl={restaurantProfile?.image}>
+                <ButtonMap />
+                <div className="header" >                                   
                     <h2 className="header--title heading-2">{restaurantProfile?.name}</h2>                              
 				</div>
             <PopUp className="popup">  
                     <div className="popup__icons">
-                    <img src={Burger} alt=""/>
-                    <img src={Drink} alt=""/>
-                    <img src={Beef} alt=""/>
-                    <img src={Vegan} alt=""/>
+                    <img src={restaurantProfile?.burger} alt=""/>
+                    <img src={restaurantProfile?.beef} alt=""/>
+                    <img src={restaurantProfile?.vegan} alt=""/>
+                    <img src={restaurantProfile?.drink} alt=""/>
                     </div>              
                     <div className="popup__description">                                                
                         <p className="paragraph">{restaurantProfile?.description}</p>
                     </div>            
                     <div className="popup__time">
                         <div className="popup__time--header">
-                            <img src={Time} alt=""/>
+                            <img src={restaurantProfile?.time} alt=""/>
                             <h3 className="heading-3">Öffnungszeiten</h3> 
                         </div>                                   
                         <ul className="popup__time--list">
@@ -94,7 +95,7 @@ export default function RestaurantsDetail() {
                     </div>
                     <div className="popup__location">
                         <div className="popup__location--header">
-                            <img src={Location} alt=""/>
+                            <img src={restaurantProfile?.location} alt=""/>
                             <h3 className="heading-3">Location</h3>
                         </div>                    
                         <p >{restaurantProfile?.street}, {restaurantProfile?.zipcode} {restaurantProfile?.city}</p>
@@ -115,7 +116,7 @@ const RestaurantWrapper = styled.div`
     .header {
         display: flex;
         justify-content: center;
-        background: url(${FoodImage}) center no-repeat ;
+        background: url(${(props) => props.imgUrl}) center no-repeat ;
         background-size: cover;
         height: 50vh;
         width: 100vw;
@@ -150,7 +151,17 @@ const PopUp = styled.div`
         &__location{
             margin-bottom: 3rem;                            
         }
-
+        &__time--header,
+        &__location--header{
+            display: flex;
+            img{
+                height: 26px;
+            }
+            h3 {
+                padding-left: 1rem;
+            }
+            
+        }
         &__icons{
             display: flex;
             justify-content: space-evenly;
@@ -159,16 +170,8 @@ const PopUp = styled.div`
             height: 26px;
             }  
         }
+
         &__time{
-            &--header {
-                display: flex;
-                img {           
-                    height: 26px;
-                }   
-                h3{
-                    padding-left: 1rem;
-                }
-            }
             &--list{
                 padding: 0.875rem 0 1.4rem 0 ;
                 list-style-type: none;
@@ -184,18 +187,8 @@ const PopUp = styled.div`
             p {
                 font-size: 1rem;
                 line-height: 2rem;
-                padding-left: 2.7rem;
-                
-            }
-            &--header {
-                display: flex;
-                img {           
-                width: 26px;
-                }  
-                h3{
-                    padding-left: 1rem;
-                }
-            }                  
+                padding-left: 2.7rem;                
+            }                   
         }
     }
     

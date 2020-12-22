@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro'
 
-import FoodImage from '../images/restaurants_img/Occam.JPG'
+
 
 
 export default function Carousel() {
@@ -39,7 +39,7 @@ div{
     width: 172px;
     height: 172px;
     border-radius: 20px;
-    background: url(${FoodImage}) center no-repeat ;
+   
     background-size: cover;
     opacity: 1;
     animation: display 10s infinite;

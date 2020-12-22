@@ -1,0 +1,232 @@
+[
+	{
+		"@type": [
+			"Abholung im Laden"
+		],
+		"cuisine": [
+			"internationale Gerichte",
+			"regional"
+		],
+		"name": "Würstelkönig",
+		"description": "Ein Mann, ein Sandwich, eine Münchner Legende. Der in Salzburg geborene Würstelkönig führt sein Imbisslokal am Goetheplatz seit 1988 und hat sich mit seiner kleinen aber feinen Speisekarte als echte Münchner Institution etabliert.",
+		"address": {
+			"coord": [
+				48.13010445394142, 
+				11.561039532754647
+			],
+			"street": "Lindwurmstrasse 77",
+			"zipcode": "80337",
+			"state": "Bavaria",
+			"city": "München",
+			"borough": "Ludwigvorstadt-Isarvorstadt"
+		},
+		"openinghours": {
+			"monday": "geschlossen",
+			"tuesday": "10:00 - 18:00",
+			"wednesday": "10:00 - 18:00",
+			"thursday": "10:00 - 18:00",
+			"friday": "10:00 - 18:00",
+			"saturday": "geschlossen",
+			"sunday": "geschlossen"
+		},
+		"pricerange": "5",
+		"paymentvariaton": [
+			"Cash"
+        ],
+		"image": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Fwuerstelkoenig%2FWuerstelkoenig.JPG?alt=media&token=b03314ba-f764-4212-a326-facd40dfd526",
+		"icons": {
+			"burger": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fburger2.png?alt=media&token=e30181e7-4748-4596-9e5f-7358535f2c29",
+			"beef": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fbeef2.png?alt=media&token=7d6e2060-39e6-40e2-962c-f59d650c5443",
+			"vegan": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fvegan2.png?alt=media&token=8e79ea29-b535-4b87-9de8-951313050ae7",
+			"drink": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fdrink2.png?alt=media&token=c21e342f-4831-4165-8d15-940752280ef7",
+			"location": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Flocation2.png?alt=media&token=fc09adfd-098a-479d-93d5-4522f5cefadb",
+			"time": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Ftime2.png?alt=media&token=a73ecd9b-edc0-4504-8a0e-25dd556113b4"
+		},		
+		"restaurant_id": "3001"
+	},
+
+	{
+		"@type": [
+			"Abholung im Laden"
+		],
+			"cuisine": [
+			"internationale Gerichte",
+			"regional"
+		],
+		"name": "Marinas Feinkost",
+		"description": "Darf ich vorstellen? Das Auf die Faust Speziale. Streichgorgonzola, Williams, Rucola, Walnüsse und ‑ je nach Geschmack ‑ Prosciutto Cotto. Ich platze vor Stolz.",
+		"address": {
+			"coord": [
+				48.13564884145783, 
+				11.576195458144362
+			],
+			"street": "Viktualienmarkt 4-8",
+			"zipcode": "80331",
+			"state": "Bavaria",
+			"city": "München",
+			"borough": "Viktualienmarkt"
+		},
+		"openinghours": {
+			"monday": "geschlossen",
+			"tuesday": "08:00 - 18:30",
+			"wednesday": "08:00 - 18:30",
+			"thursday": "08:00 - 18:30",
+			"friday": "08:00 - 18:30",
+			"saturday": "08:00 - 18:30",
+			"sunday": "geschlossen"
+		},
+		"pricerange": "5",
+		"paymentvariaton": [
+			"Cash"
+		],
+		"image": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Fmarinasfeinkost%2FMarinasfeinkost.JPG?alt=media&token=1ff6227a-8f81-4705-be3b-16e0f60418ab",
+		"icons": {
+			"burger": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fburger2.png?alt=media&token=e30181e7-4748-4596-9e5f-7358535f2c29",
+			"beef": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fbeef2.png?alt=media&token=7d6e2060-39e6-40e2-962c-f59d650c5443",
+			"vegan": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fvegan2.png?alt=media&token=8e79ea29-b535-4b87-9de8-951313050ae7",
+			"drink": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fdrink2.png?alt=media&token=c21e342f-4831-4165-8d15-940752280ef7",
+			"location": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Flocation2.png?alt=media&token=fc09adfd-098a-479d-93d5-4522f5cefadb",
+			"time": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Ftime2.png?alt=media&token=a73ecd9b-edc0-4504-8a0e-25dd556113b4"
+		},
+		"restaurant_id": "3002"
+	},
+
+	{
+		"@type": [
+			"Abholung im Laden"
+		],
+		"cuisine": [
+			"internationale Gerichte",
+			"regional"
+		],
+		"name": "Haxnbauer",
+		"description": "Die Rede ist von der Haxnsemmel vom haxnbauer einem mächtigen Stück Fleisch begleitet von Sauerkraut, einem kleinen Salatblatt und das alles in einer selbstgemachten Semmel.",
+		"address": {
+			"coord": [
+				48.13765407494251, 
+				11.579052463680156
+			],
+			"street": "Sparkassenstrasse 6",
+			"zipcode": "80331",
+			"state": "Bavaria",
+			"city": "München",
+			"borough": "Tal"
+		},
+		"openinghours": {
+			"monday": "12:00 - 21:00",
+			"tuesday": "12:00 - 21:00",
+			"wednesday": "12:00 - 21:00",
+			"thursday": "12:00 - 21:00",
+			"friday": "12:00 - 21:00",
+			"saturday": "12:00 - 21:00",
+			"sunday": "12:00 - 21:00"
+		},
+		"pricerange": "5",
+		"paymentvariaton": [
+			"Cash"
+		],
+		"image": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Fhaxnbauer%2Fhaxnbauer.jpeg?alt=media&token=45a0a7a8-e3a8-4f24-a2f7-4c2336621095",
+		"icons": {
+			"burger": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fburger2.png?alt=media&token=e30181e7-4748-4596-9e5f-7358535f2c29",
+			"beef": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fbeef2.png?alt=media&token=7d6e2060-39e6-40e2-962c-f59d650c5443",
+			"vegan": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fvegan2.png?alt=media&token=8e79ea29-b535-4b87-9de8-951313050ae7",
+			"drink": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fdrink2.png?alt=media&token=c21e342f-4831-4165-8d15-940752280ef7",
+			"location": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Flocation2.png?alt=media&token=fc09adfd-098a-479d-93d5-4522f5cefadb",
+			"time": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Ftime2.png?alt=media&token=a73ecd9b-edc0-4504-8a0e-25dd556113b4"
+		},
+		"restaurant_id": "3003"
+	},
+
+	{
+		"@type": [
+			"Abholung im Laden"
+		],
+		"cuisine": [
+			"internationale Gerichte",
+			"regional"
+		],
+		"name": "Spezlwirtschaft",
+		"description": "Cubano de la Faust mit knusprigem Speck, Hinterschinken, Cheddar Käse, eingelegten Zwiebeln, Jalapeños und einer leicht scharfen Sriracha‑Mayonnaise zu probieren. Für wen es doch vegetarisch und trotzdem nasty sein soll, der kann das Nasty Jack mit Pulled Jackfruit, Cheddar Käse, eingelegten Zwiebeln und einer hausgemachten Salsa Verde bestellen.",
+		"address": {
+			"coord": [
+			48.16138279650461, 
+			11.590239398051661
+			],
+			"street": "Implerstraße 47",
+			"zipcode": "81371",
+			"state": "Bavaria",
+			"city": "München",
+			"borough": "Sendling"
+		},
+		"openinghours": {
+			"monday": "12:00 - 21:00",
+			"tuesday": "12:00 - 21:00",
+			"wednesday": "12:00 - 21:00",
+			"thursday": "12:00 - 21:00",
+			"friday": "12:00 - 21:00",
+			"saturday": "12:00 - 21:00",
+			"sunday": "geschlossen"
+		},
+		"pricerange": "5",
+		"paymentvariaton": [
+			"Cash"
+		],
+		"image": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Fspezlwirtschaft%2FSpezlwirtschaft.jpg?alt=media&token=60af87de-5ca5-4fe8-a9b0-50ae06339bbd",
+		"icons": {
+			"burger": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fburger2.png?alt=media&token=e30181e7-4748-4596-9e5f-7358535f2c29",
+			"beef": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fbeef2.png?alt=media&token=7d6e2060-39e6-40e2-962c-f59d650c5443",
+			"vegan": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fvegan2.png?alt=media&token=8e79ea29-b535-4b87-9de8-951313050ae7",
+			"drink": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fdrink2.png?alt=media&token=c21e342f-4831-4165-8d15-940752280ef7",
+			"location": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Flocation2.png?alt=media&token=fc09adfd-098a-479d-93d5-4522f5cefadb",
+			"time": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Ftime2.png?alt=media&token=a73ecd9b-edc0-4504-8a0e-25dd556113b4"
+		},
+		"restaurant_id": "3004"
+	},
+
+	{
+		"@type": [
+			"Abholung im Laden"
+		],
+		"cuisine": [
+			"internationale Gerichte",
+			"regional"
+		],
+		"name": "Rustikeria",
+		"description": "Wer auf der Suche nach der Dolce Vita ist, sollte die rustikeria im Glockenbachviertel auf jeden Fall besuchen. Hier werdet ihr zwar keine klassischen Hauptspeisen finden, denn hier geht es ganz klar um Sandwiches bzw Schiacciata, eine reich belegte Focaccia. Der äußerst nette und aufmerksame Massimo präsentiert hier stolz hochwertig und extrem leckere Aufschnitte und Käsevarianten aus seiner Heimat und bringt somit ein Stück Toskana nach München.",
+		"address": {
+			"coord": [
+				48.131804196615086, 
+				11.570019173014202
+			],
+			"street": "Angertorstraße 4",
+			"zipcode": "80469",
+			"state": "Bavaria",
+			"city": "München",
+			"borough": "Glockenbachviertel"
+		},
+		"openinghours": {
+			"monday": "geschlossen",
+			"tuesday": "geschlossen",
+			"wednesday": "geschlossen",
+			"thursday": "17:00 - 20:00",
+			"friday": "17:00 - 20:00",
+			"saturday": "17:00 - 20:00",
+			"sunday": "geschlossen"
+			
+		},
+		"pricerange": "5",
+		"paymentvariaton": [
+			"Cash"
+		],
+		"image": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Frustikeria%2FRustikeria.jpg?alt=media&token=70c74c4d-7bc0-44fd-b343-befe20a6f3f9",
+		"icons": {
+			"burger": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fburger2.png?alt=media&token=e30181e7-4748-4596-9e5f-7358535f2c29",
+			"beef": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fbeef2.png?alt=media&token=7d6e2060-39e6-40e2-962c-f59d650c5443",
+			"vegan": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fvegan2.png?alt=media&token=8e79ea29-b535-4b87-9de8-951313050ae7",
+			"drink": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Fdrink2.png?alt=media&token=c21e342f-4831-4165-8d15-940752280ef7",
+			"location": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Flocation2.png?alt=media&token=fc09adfd-098a-479d-93d5-4522f5cefadb",
+			"time": "https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/restaurants%2Ffood_icons%2Ftime2.png?alt=media&token=a73ecd9b-edc0-4504-8a0e-25dd556113b4"
+		},
+		"restaurant_id": "3005"
+	}
+]

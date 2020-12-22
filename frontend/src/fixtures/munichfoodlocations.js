@@ -24,7 +24,7 @@ export const locations = [
         },
     },
     {
-        name: "Cubano & Nasty Jack",
+        name: "Spezlwirtschaft",
         id: 3004,
         location: { 
             lat: 48.11962337544012, 
@@ -32,11 +32,11 @@ export const locations = [
         },
     },
     {
-        name: "Der Dantler",
+        name: "Rustikeria",
         id: 3005,
         location: { 
-            lat: 48.11599969921883, 
-            lng: 11.58492991180738
+            lat: 48.131804196615086, 
+            lng: 11.570019173014202
         },
     }  
 ];

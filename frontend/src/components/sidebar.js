@@ -1,20 +1,20 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { slide as Menu} from 'react-burger-menu'
+
 import '../styles/burgermenu.css'
-import Domi from '../images/domi.JPG'
 import styled from 'styled-components/macro'
 
 
 
 export default function Sidebar({userProfile}) {   
     
-    return (
-        
+    return (        
         <Menu>
             <SideBar>            
                 <div className="sidebar__header">
-                    <img className="sidebar__header--image" src={Domi} alt=""/>
+                    <img className="sidebar__header--image" 
+                    src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/users%2Fdomi.JPG?alt=media&token=9604e567-94f9-4679-8677-b936e4892af4'} alt=""/>
                     <h2 className="sidebar__header--title heading-2">Hello <br/><strong>{userProfile.userName}</strong></h2>               
                 </div>   
                 <hr/>                   

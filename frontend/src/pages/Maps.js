@@ -1,10 +1,8 @@
 import {useCallback, useRef} from 'react';
 import { GoogleMap, useLoadScript} from '../../node_modules/@react-google-maps/api';
 import LocationsMarker from '../components/locationsmarker';
-import { mapStyles} from '../styles/mapstyles'
 import Geolocate from '../components/geolocation';
-import Carousel from '../components/carousel';
-
+import { mapStyles} from '../styles/mapstyles';
 
 const mapContainerStyle = {
 	width: '100vw',
@@ -22,8 +20,6 @@ const options = {
 	mapTypeControl: false,
 	zoomControl: false,
 };
-
-
 
 export default function Map() {
 
@@ -55,7 +51,7 @@ export default function Map() {
 		>
 			<LocationsMarker/>
 			<Geolocate panTo={panTo} />
-			<Carousel />
+			
 			
 		</GoogleMap>
 	)

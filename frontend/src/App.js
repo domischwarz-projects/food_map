@@ -1,17 +1,15 @@
 import React, { useState } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Map from './pages/Maps'
+import { loadToken } from './services/tokenStorage';
 
+import SideBar from './components/sidebar'
+
+import Map from './pages/Maps'
 import UserCreate from './pages/UserCreate'
 import RestaurantsDetail from './pages/Restaurants_Detail';
 import UsersFavourites from './pages/Users_Favourites'
-import SideBar from './components/sidebar'
 import WelcomeUser from './pages/Welcome_User'
 import UserLogin from './pages/UserLogin'
-import { loadToken } from './services/tokenStorage';
-
-
-
 
 
 function App() {
