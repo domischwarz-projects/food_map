@@ -21,7 +21,6 @@ export default function Sidebar({userProfile}) {
             </SideBar>
             
             <NavLink className="menu-item" to="/map">FoodGuide</NavLink>                              
-            <NavLink className="menu-item" to="/login">Login</NavLink>
         </Menu>
     )
 }

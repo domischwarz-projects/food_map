@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/macro'
-import Logo from '../images/food_logo.png'
+
 
 
 
@@ -10,7 +10,7 @@ export default function UsersFavourites() {
 			<PopUp>
 				<div className="popup">
 					<div className="popup__favourites">
-						<img className="popup__favourites--image" src={Logo} alt=""/>
+						<img className="popup__favourites--image" src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/logo%2Ffood_logo.png?alt=media&token=6dc17304-0417-4048-861d-d618fe39fbba'} alt=""/>
 						<div className="popup__favourites--content">
 							<h2 className="heading-3">Türkitsch</h2>
 							<p href="/#">Arnulfstraße 58, 80335 München</p>
@@ -18,7 +18,7 @@ export default function UsersFavourites() {
 					</div>
 					<hr/>
 					<div className="popup__favourites">
-						<img className="popup__favourites--image" src={Logo} alt=""/>
+						<img className="popup__favourites--image" src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/logo%2Ffood_logo.png?alt=media&token=6dc17304-0417-4048-861d-d618fe39fbba'} alt=""/>
 						<div className="popup__favourites--content">
 							<h2 className="heading-3">Türkitsch</h2>
 							<p href="/#">Arnulfstraße 58, 80335 München</p>
@@ -26,7 +26,7 @@ export default function UsersFavourites() {
 					</div>
 					<hr/>
 					<div className="popup__favourites">
-						<img className="popup__favourites--image" src={Logo} alt=""/>
+						<img className="popup__favourites--image" src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/logo%2Ffood_logo.png?alt=media&token=6dc17304-0417-4048-861d-d618fe39fbba'} alt=""/>
 						<div className="popup__favourites--content">
 							<h2 className="heading-3">Türkitsch</h2>
 							<p href="/#">Arnulfstraße 58, 80335 München</p>
@@ -34,7 +34,7 @@ export default function UsersFavourites() {
 					</div>
 					<hr/>
 					<div className="popup__favourites">
-						<img className="popup__favourites--image" src={Logo} alt=""/>
+						<img className="popup__favourites--image" src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/logo%2Ffood_logo.png?alt=media&token=6dc17304-0417-4048-861d-d618fe39fbba'} alt=""/>
 						<div className="popup__favourites--content">
 							<h2 className="heading-3">Türkitsch</h2>
 							<p href="/#">Arnulfstraße 58, 80335 München</p>
