@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro'
-import Location from '../images/map_img/cursor.svg'
+
 
 
 
@@ -19,7 +19,7 @@ export default function Geolocate({panTo}) {
 				);
 			}}
 		>
-			<img src={Location} alt=""/>
+			<img src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/map%2Ficons%2Fcursor.svg?alt=media&token=14d1c006-2ddc-40ea-815d-ea8ed5a8c46f'} alt=""/>
 		</ButtonLocate>       
     )
 }

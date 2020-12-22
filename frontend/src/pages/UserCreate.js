@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom'
 export default function UserCreate() {
 
     const history = useHistory();
-    const handleClick = () => history.push('/login');
+ 
 
     const [userProfile, setUserProfile] = useState({
     userName: '',        
@@ -37,7 +37,8 @@ export default function UserCreate() {
             })
             .then((data) => data.json())  
             .then(_ => {
-                history.push('/welcome', {userProfile}) ; 
+                history.push('/welcome', {userProfile});
+                
             })
             .catch((error) => console.error(error));                          
         } else {
@@ -45,6 +46,7 @@ export default function UserCreate() {
         }
     }
 
+    const handleClick = () => history.push('/login');
 
     return (
         <PopUp onSubmit={sendForm}>
@@ -97,7 +99,7 @@ export default function UserCreate() {
                     <Button disabled={!formIsValid}>Create Account</Button>
                 </div>
                 <div className="popup__account">
-                    <p>Already have an account? <span onClick={handleClick}>Login</span></p>
+                    <p>Already have an account? <span onClick={handleClick} >Login</span></p>
                 </div>
 			</div>                               
         </PopUp>
@@ -200,6 +202,7 @@ const PopUp = styled.form`
             text-align: center;
             span {
                 color: #FF5757;
+                cursor: pointer;
             }
         }      
     }

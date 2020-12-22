@@ -1,10 +1,8 @@
 import {  useEffect, useState } from 'react';
 import styled from 'styled-components/macro'
 import { saveToken } from '../services/tokenStorage';
-
 import { useHistory } from 'react-router-dom'
-import Logo from '../images/food_logo.png'
-import LeftArrow from '../images/Icons/left-arrow.svg'
+
 
 
 export default function UserLogin({onSignIn}) {
@@ -39,8 +37,7 @@ export default function UserLogin({onSignIn}) {
                 },
                 body: JSON.stringify(userProfile),
             })
-            .then((data) => data.json())  
-            
+            .then((data) => data.json())              
             .then(user => {
                 saveToken(user.accesstoken);
                 onSignIn(userProfile)
@@ -57,10 +54,10 @@ export default function UserLogin({onSignIn}) {
         <PopUp onSubmit={sendForm}>
 			<div className="popup">
                 <ButtonArrow onClick={handleClick}>
-                    <img src={LeftArrow} alt=""/>
+                    <img src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/icons%2Fleft-arrow.svg?alt=media&token=1d9084d9-20ad-4ed8-b6ef-ce9000353b44'} alt=""/>
                 </ButtonArrow>
 				<div className="popup__header">					
-                    <img className="popup__header--image" src={Logo} alt=""/>              
+                    <img className="popup__header--image" src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/logo%2Ffood_logo.png?alt=media&token=6dc17304-0417-4048-861d-d618fe39fbba'} alt=""/>              
 				</div>
 
                 <div className="popup__login">

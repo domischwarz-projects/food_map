@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
 import styled from 'styled-components/macro'
-import Logo from '../images/food_logo.png'
+
 
 
 export default function WelcomeUser() {
@@ -16,7 +16,7 @@ export default function WelcomeUser() {
         <WelcomeUserwrapper>
 			<div className="popup">
 				<div className="popup__header">					
-                    <img className="popup__header--image" src={Logo} alt=""/>              
+                    <img className="popup__header--image" src={'https://firebasestorage.googleapis.com/v0/b/food-map-app.appspot.com/o/logo%2Ffood_logo.png?alt=media&token=6dc17304-0417-4048-861d-d618fe39fbba'} alt=""/>              
 				</div>
 
                 <div className="popup__header">                    
