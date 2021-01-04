@@ -145,10 +145,10 @@ const PopUp = styled.form`
             justify-content: center;	
 		}
         &__sign {
+            
             margin-top: 6.688rem;
             margin-bottom: 2.5rem;
             
-
             &--title {
                 font-size: 1.5rem;
                 text-transform: none; 

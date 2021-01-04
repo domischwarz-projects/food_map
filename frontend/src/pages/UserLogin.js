@@ -123,7 +123,7 @@ const PopUp = styled.form`
 
     .popup{		
         margin-top: 5.5rem;
-
+        
 		&__header {
             display: flex;
             justify-content: center;

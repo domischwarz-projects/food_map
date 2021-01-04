@@ -123,6 +123,7 @@ const RestaurantWrapper = styled.div`
         position: fixed;
         top: 0;
 
+
         &--title {
             display: flex;
             align-items: center;
