@@ -45,6 +45,13 @@ const WelcomeUserwrapper = styled.form`
     .popup{		
         margin-top: 18rem;
 
+        //Quick Fix - saubere Lösung finden
+        @media screen 
+            and (min-device-height: 667px) 
+            and (max-device-height: 811px)  { 
+                margin-top: 12rem;
+            }
+
         &__header {
             display: flex;
             justify-content: center;

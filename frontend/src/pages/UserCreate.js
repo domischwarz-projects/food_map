@@ -149,6 +149,15 @@ const PopUp = styled.form`
             margin-top: 6.688rem;
             margin-bottom: 2.5rem;
             
+            //Quick Fix - saubere Lösung finden
+            @media screen 
+            and (min-device-height: 667px) 
+            and (max-device-height: 811px)  { 
+                margin-top: 2rem;
+            }
+            
+            
+
             &--title {
                 font-size: 1.5rem;
                 text-transform: none; 
