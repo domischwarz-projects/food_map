@@ -123,7 +123,14 @@ const PopUp = styled.form`
 
     .popup{		
         margin-top: 5.5rem;
-        
+
+        //Quick Fix - saubere Lösung finden
+        @media screen 
+        and (min-device-height: 667px) 
+        and (max-device-height: 811px)  { 
+            margin-top: 1.5rem;
+        }
+
 		&__header {
             display: flex;
             justify-content: center;
@@ -136,6 +143,13 @@ const PopUp = styled.form`
         &__login {
             margin-top: 4.75rem;
             margin-bottom: 1.44rem;
+
+            //Quick Fix - saubere Lösung finden
+            @media screen 
+            and (min-device-height: 667px) 
+            and (max-device-height: 811px)  { 
+                margin-top: 2.5rem;
+            }
 
             &--title {
                 font-size: 2.25rem;

@@ -123,6 +123,12 @@ const RestaurantWrapper = styled.div`
         position: fixed;
         top: 0;
 
+        //Quick Fix - saubere Lösung finden
+        @media screen 
+            and (min-device-height: 667px) 
+            and (max-device-height: 811px)  { 
+                height: 55vh;
+            }
 
         &--title {
             display: flex;
