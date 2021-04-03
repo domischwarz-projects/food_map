@@ -2,4 +2,4 @@
 
 This repository is my journeyman piece.
 
-From Neue Fische Webdev Academy
+From my 3 month (October 2020 - January 2021) Webdev Bootcamp at Neue Fische in Munich.
