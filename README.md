@@ -1,5 +1,5 @@
 # This is my Personal Food Map
 
-This repository is my journeyman piece, which I will complete in the next 5 weeks.
+This repository is my journeyman piece.
 
-Still Work in progress.
+From Neue Fische Webdev Academy
